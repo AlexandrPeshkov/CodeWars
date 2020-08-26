@@ -14,7 +14,7 @@ namespace CodeWarsTests.Kata.Middle
         [Test]
         public void Preference()
         {
-            base.Preference(ShouldRemoveAllVowels);
+            base.Perfomance(ShouldRemoveAllVowels);
         }
     }
 }
