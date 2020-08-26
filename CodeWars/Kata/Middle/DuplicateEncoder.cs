@@ -9,7 +9,7 @@ namespace CodeWars.Kata.Middle
     //Ignore capitalization when determining if a character is a duplicate.
     public class DuplicateEncoder
     {
-        public static string DuplicateEncode(string word)
+        public static string DuplicateEncode_(string word)
         {
             Dictionary<char, int> charsCnt = new Dictionary<char, int>();
             foreach (var chr in word.ToLower())
@@ -26,7 +26,7 @@ namespace CodeWars.Kata.Middle
             return string.Join(string.Empty, word.ToLower().Select(x => charsCnt[x] > 1 ? ')' : '('));
         }
 
-        public static string DuplicateEncode_(string word)
+        public static string DuplicateEncode(string word)
         {
             Dictionary<char, uint> letterCount = new Dictionary<char, uint>(word.Length);
             const char _right = ')';
