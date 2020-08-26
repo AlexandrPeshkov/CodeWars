@@ -22,7 +22,6 @@ namespace CodeWars.Kata.Juniour
 
             IEnumerator<T> enumerator = iterable.GetEnumerator();
             T curent = default;
-            //List<T> res = new List<T>(iterable.Count());
 
             bool isMoved;
             do

@@ -4,14 +4,8 @@ using System.Collections.Generic;
 
 namespace CodeWarsTests.Kata.Juniour
 {
-    [TestFixture]
-    public class Task1Tests
+    public class UniqueInOrderTests : BaseTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void EmptyTest()
         {
