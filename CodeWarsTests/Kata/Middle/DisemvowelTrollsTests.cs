@@ -6,15 +6,9 @@ namespace CodeWarsTests.Kata.Middle
     internal class DisemvowelTrollsTests : BaseTest
     {
         [Test]
-        public void ShouldRemoveAllVowels()
+        public override void RunTests()
         {
             Assert.AreEqual("Ths wbst s fr lsrs LL!", DisemvowelTrolls.Disemvowel("This website is for losers LOL!"));
-        }
-
-        [Test]
-        public void Preference()
-        {
-            base.Perfomance(ShouldRemoveAllVowels);
         }
     }
 }

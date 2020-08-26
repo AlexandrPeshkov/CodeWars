@@ -8,11 +8,15 @@ namespace CodeWarsTests.Kata
     {
         private const int _iterationCount = 10000;
 
-        public void Perfomance(Action action)
+        [Test]
+        public abstract void RunTests();
+
+        [Test]
+        public void Perfomance()
         {
             for (var i = 0; i < _iterationCount; i++)
             {
-                action();
+                RunTests();
             }
         }
     }
