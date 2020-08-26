@@ -25,6 +25,11 @@ namespace CodeWars.Kata.Juniour
                 }
             }
 
+            if (_oCount == 0 && _xCount == 0)
+            {
+                return false;
+            }
+
             return _oCount == _xCount;
         }
     }

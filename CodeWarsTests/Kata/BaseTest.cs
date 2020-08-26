@@ -4,15 +4,19 @@ using System;
 namespace CodeWarsTests.Kata
 {
     [TestFixture]
-    public class BaseTest
+    public abstract class BaseTest
     {
         private const int _iterationCount = 10000;
 
-        public void Preference(Action action)
+        [Test]
+        public abstract void RunTests();
+
+        [Test]
+        public void Perfomance()
         {
             for (var i = 0; i < _iterationCount; i++)
             {
-                action();
+                RunTests();
             }
         }
     }

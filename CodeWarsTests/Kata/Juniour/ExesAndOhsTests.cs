@@ -6,7 +6,7 @@ namespace CodeWarsTests.Kata.Juniour
     internal class ExesAndOhsTests : BaseTest
     {
         [Test]
-        public void ExampleTests()
+        public override void RunTests()
         {
             Assert.AreEqual(true, ExesAndOhs.XO("xo"));
             Assert.AreEqual(true, ExesAndOhs.XO("xxOo"));

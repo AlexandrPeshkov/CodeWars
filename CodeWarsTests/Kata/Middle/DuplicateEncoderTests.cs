@@ -1,15 +1,12 @@
 ﻿using CodeWars.Kata.Middle;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CodeWarsTests.Kata.Middle
 {
     internal class DuplicateEncoderTests : BaseTest
     {
         [Test]
-        public void BasicTests()
+        public override void RunTests()
         {
             Assert.AreEqual("(((", DuplicateEncoder.DuplicateEncode("din"));
             Assert.AreEqual("()()()", DuplicateEncoder.DuplicateEncode("recede"));
