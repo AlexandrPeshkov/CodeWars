@@ -27,14 +27,12 @@ namespace CodeWars.Kata.Middle
                 return string.Empty;
             }
             StringBuilder builder = new StringBuilder(text.Length * 3);
-            //const string space = " ";
-            foreach (var letter in text.ToLower())
+            foreach (var letter in text)
             {
-                if (char.IsLetter(letter))
+                if (char.IsLetter(char.ToLowerInvariant(letter)))
                 {
-                    //builder.Append(letter - 96);
                     builder.Append(letter & 31);
-                    builder.Append(32);
+                    builder.Append(' ');
                 }
             }
 

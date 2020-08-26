@@ -1,8 +1,5 @@
 ﻿using CodeWars.Kata.Middle;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CodeWarsTests.Kata.Middle
 {
@@ -11,7 +8,7 @@ namespace CodeWarsTests.Kata.Middle
         public object DuplicateCount { get; private set; }
 
         [Test]
-        public void BasicTests()
+        public override void RunTests()
         {
             Assert.AreEqual(0, CountingDuplicates.DuplicateCount(""));
             Assert.AreEqual(0, CountingDuplicates.DuplicateCount("abcde"));

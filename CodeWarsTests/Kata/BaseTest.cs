@@ -6,7 +6,7 @@ namespace CodeWarsTests.Kata
     [TestFixture]
     public abstract class BaseTest
     {
-        private const int _iterationCount = 10000;
+        private const int _iterationCount = 100000;
 
         [Test]
         public abstract void RunTests();
