@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
+using System.Text;
 
 namespace CodeWars.Kata.Middle
 {
