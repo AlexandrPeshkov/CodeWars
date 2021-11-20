@@ -16,4 +16,8 @@
     <ProjectReference Include="..\CodeWars\CodeWars.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Kata\Hard" />
+  </ItemGroup>
+
 </Project>
