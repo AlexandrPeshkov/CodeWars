@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace CodeWars.Kata.Juniour
 {
@@ -15,26 +14,22 @@ namespace CodeWars.Kata.Juniour
         /// <returns></returns>
         public static IEnumerable<T> UniqueInOrder<T>(IEnumerable<T> iterable)
         {
-            if (iterable == null)
-            {
-                yield return default;
-            }
+            if (iterable == null) yield return default;
 
             IEnumerator<T> enumerator = iterable.GetEnumerator();
             T curent = default;
 
             bool isMoved;
+
             do
             {
                 isMoved = enumerator.MoveNext();
+
                 if (isMoved)
                 {
                     T prev = curent;
                     curent = enumerator.Current;
-                    if (System.Object.Equals(prev, curent) == false)
-                    {
-                        yield return curent;
-                    }
+                    if (Equals(prev, curent) == false) yield return curent;
                 }
             } while (isMoved == true);
         }

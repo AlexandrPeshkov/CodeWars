@@ -1,6 +1,6 @@
-﻿using CodeWars.Kata.Juniour;
+﻿using System.Collections.Generic;
+using CodeWars.Kata.Juniour;
 using NUnit.Framework;
-using System.Collections.Generic;
 
 namespace CodeWarsTests.Kata.Juniour
 {
@@ -10,7 +10,9 @@ namespace CodeWarsTests.Kata.Juniour
         {
             Assert.AreEqual("", UniqueInOrderSolution.UniqueInOrder(""));
             Assert.AreEqual("ABCDAB", UniqueInOrderSolution.UniqueInOrder("AAAABBBCCDAABBB"));
-            Assert.AreEqual(new List<string> { "A", "B", null, "" }, UniqueInOrderSolution.UniqueInOrder(new List<string> { "A", "B", "B", null, "" }));
+
+            Assert.AreEqual(new List<string> { "A", "B", null, "" },
+                UniqueInOrderSolution.UniqueInOrder(new List<string> { "A", "B", "B", null, "" }));
         }
     }
 }

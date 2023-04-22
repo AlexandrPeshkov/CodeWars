@@ -20,7 +20,7 @@ namespace CodeWars.Kata._5kyu
 
             //var maskStr2 = Convert.ToString(mask, 2);
 
-            var maxValueBit = MathF.Round(MathF.Log2(n));
+            float maxValueBit = MathF.Round(MathF.Log2(n));
 
             for (var i = 0; i < 32; i++)
             {
@@ -31,12 +31,9 @@ namespace CodeWars.Kata._5kyu
                 //<<4
                 //
                 //var shift = (n >> i);
-                var r = (n >> i) & mask;
+                int r = (n >> i) & mask;
 
-                if (r == 1)
-                {
-                    oneBitCount++;
-                }
+                if (r == 1) oneBitCount++;
 
                 // var numberStr2 = Convert.ToString(n, 2);
                 // var shiftStr2 = Convert.ToString(shift, 2);

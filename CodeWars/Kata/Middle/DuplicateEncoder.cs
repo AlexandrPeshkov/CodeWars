@@ -11,53 +11,45 @@ namespace CodeWars.Kata.Middle
     {
         public static string DuplicateEncode_(string word)
         {
-            Dictionary<char, int> charsCnt = new Dictionary<char, int>();
-            foreach (var chr in word.ToLower())
+            var charsCnt = new Dictionary<char, int>();
+
+            foreach (char chr in word.ToLower())
             {
                 if (charsCnt.TryGetValue(chr, out int val))
-                {
                     charsCnt[chr]++;
-                }
                 else
-                {
                     charsCnt.Add(chr, 1);
-                }
             }
+
             return string.Join(string.Empty, word.ToLower().Select(x => charsCnt[x] > 1 ? ')' : '('));
         }
 
         public static string DuplicateEncode(string word)
         {
-            Dictionary<char, uint> letterCount = new Dictionary<char, uint>(word.Length);
+            var letterCount = new Dictionary<char, uint>(word.Length);
             const char _right = ')';
             const char _left = '(';
 
             string lowerStr = word.ToLower();
 
-            foreach (var letter in lowerStr)
+            foreach (char letter in lowerStr)
             {
-                if (letterCount.TryGetValue(letter, out var counter) == false)
-                {
+                if (letterCount.TryGetValue(letter, out uint counter) == false)
                     letterCount.Add(letter, 1);
-                }
                 else
-                {
                     letterCount[letter] = ++counter;
-                }
             }
 
-            StringBuilder stringBuilder = new StringBuilder();
-            foreach (var letter in lowerStr)
+            var stringBuilder = new StringBuilder();
+
+            foreach (char letter in lowerStr)
             {
                 if (letterCount[letter] > 1)
-                {
                     stringBuilder.Append(_right);
-                }
                 else
-                {
                     stringBuilder.Append(_left);
-                }
             }
+
             return stringBuilder.ToString();
         }
     }

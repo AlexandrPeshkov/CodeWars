@@ -20,30 +20,28 @@ namespace CodeWars.Kata.Middle
 
         public static int DuplicateCount__(string str)
         {
-            int[] counter = new int[128];
+            var counter = new int[128];
 
-            foreach (var letter in str)
+            foreach (char letter in str)
             {
                 counter[char.ToLower(letter)]++;
             }
+
             return counter.Count(x => x > 1);
         }
 
         public static int DuplicateCount(string str)
         {
-            Dictionary<char, uint> letterCount = new Dictionary<char, uint>(str.Length);
+            var letterCount = new Dictionary<char, uint>(str.Length);
 
-            foreach (var letter in str)
+            foreach (char letter in str)
             {
-                char lowerLetter = char.ToLower(letter);
-                if (letterCount.TryGetValue(lowerLetter, out var counter))
-                {
+                var lowerLetter = char.ToLower(letter);
+
+                if (letterCount.TryGetValue(lowerLetter, out uint counter))
                     letterCount[lowerLetter] = ++counter;
-                }
                 else
-                {
                     letterCount.Add(lowerLetter, 1);
-                }
             }
 
             return letterCount.Count(x => x.Value > 1);

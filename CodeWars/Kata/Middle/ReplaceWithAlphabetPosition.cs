@@ -22,12 +22,11 @@ namespace CodeWars.Kata.Middle
 
         public static string AlphabetPosition(string text)
         {
-            if (text.Length == 0)
-            {
-                return string.Empty;
-            }
-            StringBuilder builder = new StringBuilder(text.Length * 3);
-            foreach (var letter in text)
+            if (text.Length == 0) return string.Empty;
+
+            var builder = new StringBuilder(text.Length * 3);
+
+            foreach (char letter in text)
             {
                 if (char.IsLetter(char.ToLowerInvariant(letter)))
                 {
@@ -36,10 +35,8 @@ namespace CodeWars.Kata.Middle
                 }
             }
 
-            if (builder.Length > 1)
-            {
-                return builder.Remove(builder.Length - 1, 1).ToString();
-            }
+            if (builder.Length > 1) return builder.Remove(builder.Length - 1, 1).ToString();
+
             return string.Empty;
         }
     }

@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace CodeWars.Kata.Juniour
+﻿namespace CodeWars.Kata.Juniour
 {
     public class ExesAndOhs
     {
@@ -9,26 +7,17 @@ namespace CodeWars.Kata.Juniour
             const char _o = 'o';
             const char _x = 'x';
 
-            int _oCount = 0;
-            int _xCount = 0;
+            var _oCount = 0;
+            var _xCount = 0;
 
-            foreach (var letter in input.ToLower())
+            foreach (char letter in input.ToLower())
             {
-                if (letter == _o)
-                {
-                    _oCount++;
-                }
+                if (letter == _o) _oCount++;
 
-                if (letter == _x)
-                {
-                    _xCount++;
-                }
+                if (letter == _x) _xCount++;
             }
 
-            if (_oCount == 0 && _xCount == 0)
-            {
-                return false;
-            }
+            if (_oCount == 0 && _xCount == 0) return false;
 
             return _oCount == _xCount;
         }

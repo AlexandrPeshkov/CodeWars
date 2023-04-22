@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace CodeWars.Kata.Juniour
 {
@@ -16,18 +15,14 @@ namespace CodeWars.Kata.Juniour
             const string open = "Open";
             const string senior = "Senior";
 
-            foreach (var person in data)
+            foreach (int[] person in data)
             {
                 if (person?.Length == 2)
                 {
                     if (person[0] >= 55 && person[1] > 7)
-                    {
                         yield return senior;
-                    }
                     else
-                    {
                         yield return open;
-                    }
                 }
                 else
                 {

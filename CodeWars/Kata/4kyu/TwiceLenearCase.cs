@@ -9,6 +9,7 @@ namespace CodeWars.Kata._4kyu
     {
         public static BigInteger diagonal(int n, int p)
         {
+            return default;
             // your code
         }
     }
